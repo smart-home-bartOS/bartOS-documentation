@@ -1,0 +1,84 @@
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: xbarto96.aux
+The style file: bib-styles/Pysny/czplain.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: xbarto96-20-literatura-bibliography.bib
+Warning--empty year in mqtt:info
+Warning--empty year in terminy:oidc
+Warning--empty year and revised in terminy:oidc
+Warning--empty year in hivemq:info
+Warning--empty year and revised in hivemq:info
+You can't pop an empty literal stack for entry mqtt:hivemq
+while executing---line 3240 of file bib-styles/Pysny/czplain.bst
+Warning--"{" isn't a brace-balanced string for entry raspberryLogo
+while executing--line 3240 of file bib-styles/Pysny/czplain.bst
+Warning--"{" isn't a brace-balanced string for entry quarkus:infoDev
+while executing--line 3240 of file bib-styles/Pysny/czplain.bst
+Warning--empty year in mobx:info
+Warning--empty year and revised in mobx:info
+Warning--empty year in embedded:info
+Warning--empty year and revised in embedded:info
+Warning--empty year in postgres:wiki
+Warning--empty year and revised in postgres:wiki
+Warning--empty year in postgres:tutorial
+Warning--empty year and revised in postgres:tutorial
+Warning--empty year in quarkus:website
+Warning--empty year and revised in quarkus:website
+Warning--"{" isn't a brace-balanced string for entry json:example
+while executing--line 3240 of file bib-styles/Pysny/czplain.bst
+Warning--empty year in restful:info
+Warning--empty year in use_case:info
+Warning--empty year in wiki:esp
+Warning--empty year in wiki:iot
+Warning--empty year in wiki:mqtt
+Warning--empty year in react:info
+Warning--empty year in wiki:vertx
+You've used 29 entries,
+            3946 wiz_defined-function locations,
+            949 strings with 8701 characters,
+and the built_in function-call counts, 12418 in all, are:
+= -- 915
+> -- 382
+< -- 59
++ -- 208
+- -- 168
+* -- 649
+:= -- 1476
+add.period$ -- 90
+call.type$ -- 29
+change.case$ -- 159
+chr.to.int$ -- 33
+cite$ -- 51
+duplicate$ -- 863
+empty$ -- 1743
+format.name$ -- 58
+if$ -- 2997
+int.to.chr$ -- 0
+int.to.str$ -- 29
+missing$ -- 0
+newline$ -- 182
+num.names$ -- 58
+pop$ -- 508
+preamble$ -- 1
+purify$ -- 87
+quote$ -- 0
+skip$ -- 595
+stack$ -- 0
+substring$ -- 283
+swap$ -- 162
+text.length$ -- 76
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 58
+warning$ -- 22
+while$ -- 85
+width$ -- 31
+write$ -- 361
+(There was 1 error message)

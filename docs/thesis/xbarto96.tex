@@ -1,0 +1,417 @@
+%==============================================================================
+% tento soubor pouzijte jako zaklad
+% this file should be used as a base for the thesis
+% Autoři / Authors: 2008 Michal Bidlo, 2019 Jaroslav Dytrych
+% Kontakt pro dotazy a připomínky: sablona@fit.vutbr.cz
+% Contact for questions and comments: sablona@fit.vutbr.cz
+%==============================================================================
+% kodovani: UTF-8 (zmena prikazem iconv, recode nebo cstocs)
+% encoding: UTF-8 (you can change it by command iconv, recode or cstocs)
+%------------------------------------------------------------------------------
+% zpracování / processing: make, make pdf, make clean
+%==============================================================================
+% Soubory, které je nutné upravit nebo smazat: / Files which have to be edited or deleted:
+%   xbarto96-20-literatura-bibliography.bib - literatura / bibliography
+%   xbarto96-01-kapitoly-chapters.tex - obsah práce / the thesis content
+%   xbarto96-01-kapitoly-chapters-en.tex - obsah práce v angličtině / the thesis content in English
+%   xbarto96-30-prilohy-appendices.tex - přílohy / appendices
+%   xbarto96-30-prilohy-appendices-en.tex - přílohy v angličtině / appendices in English
+%==============================================================================
+%\documentclass[]{fitthesis} % bez zadání - pro začátek práce, aby nebyl problém s překladem
+%\documentclass[english]{fitthesis} % without assignment - for the work start to avoid compilation problem
+\documentclass[zadani]{fitthesis} % odevzdani do wisu a/nebo tisk s barevnými odkazy - odkazy jsou barevné
+%\documentclass[english,zadani]{fitthesis} % for submission to the IS FIT and/or print with color links - links are color
+%\documentclass[zadani,print]{fitthesis} % pro černobílý tisk - odkazy jsou černé
+%\documentclass[english,zadani,print]{fitthesis} % for the black and white print - links are black
+%\documentclass[zadani,cprint]{fitthesis} % pro barevný tisk - odkazy jsou černé, znak VUT barevný
+%\documentclass[english,zadani,cprint]{fitthesis} % for the print - links are black, logo is color
+% * Je-li práce psaná v anglickém jazyce, je zapotřebí u třídy použít 
+%   parametr english následovně:
+%   If thesis is written in English, it is necessary to use 
+%   parameter english as follows:
+%      \documentclass[english]{fitthesis}
+% * Je-li práce psaná ve slovenském jazyce, je zapotřebí u třídy použít 
+%   parametr slovak následovně:
+%   If the work is written in the Slovak language, it is necessary 
+%   to use parameter slovak as follows:
+%      \documentclass[slovak]{fitthesis}
+% * Je-li práce psaná v anglickém jazyce se slovenským abstraktem apod., 
+%   je zapotřebí u třídy použít parametry english a enslovak následovně:
+%   If the work is written in English with the Slovak abstract, etc., 
+%   it is necessary to use parameters english and enslovak as follows:
+%      \documentclass[english,enslovak]{fitthesis}
+
+% Základní balíčky jsou dole v souboru šablony fitthesis.cls
+% Basic packages are at the bottom of template file fitthesis.cls
+% zde můžeme vložit vlastní balíčky / you can place own packages here
+
+% Kompilace po částech (rychlejší, ale v náhledu nemusí být vše aktuální)
+% Compilation piecewise (faster, but not all parts in preview will be up-to-date)
+% \usepackage{subfiles}
+
+% Nastavení cesty k obrázkům
+% Setting of a path to the pictures
+%\graphicspath{{obrazky-figures/}{./obrazky-figures/}}
+%\graphicspath{{obrazky-figures/}{../obrazky-figures/}}
+%---rm---------------
+\renewcommand{\rmdefault}{lmr}%zavede Latin Modern Roman jako rm / set Latin Modern Roman as rm
+%---sf---------------
+\renewcommand{\sfdefault}{qhv}%zavede TeX Gyre Heros jako sf
+%---tt------------
+\renewcommand{\ttdefault}{lmtt}% zavede Latin Modern tt jako tt
+
+% vypne funkci šablony, která automaticky nahrazuje uvozovky,
+% aby nebyly prováděny nevhodné náhrady v popisech API apod.
+% disables function of the template which replaces quotation marks
+% to avoid unnecessary replacements in the API descriptions etc.
+\csdoublequotesoff
+
+\usepackage{url}
+\usepackage{subcaption}
+
+
+% =======================================================================
+% balíček "hyperref" vytváří klikací odkazy v pdf, pokud tedy použijeme pdflatex
+% problém je, že balíček hyperref musí být uveden jako poslední, takže nemůže
+% být v šabloně
+% "hyperref" package create clickable links in pdf if you are using pdflatex.
+% Problem is that this package have to be introduced as the last one so it 
+% can not be placed in the template file.
+\ifWis
+\ifx\pdfoutput\undefined % nejedeme pod pdflatexem / we are not using pdflatex
+\else
+  \usepackage{color}
+  \usepackage[unicode,colorlinks,hyperindex,plainpages=false,pdftex]{hyperref}
+
+  \definecolor{hrcolor-ref}{RGB}{223,52,30}
+  \definecolor{hrcolor-cite}{HTML}{2F8F00}
+  \definecolor{hrcolor-urls}{HTML}{092EAB}
+  \hypersetup{
+	linkcolor=hrcolor-ref,
+	citecolor=hrcolor-cite,
+	filecolor=magenta,
+	urlcolor=hrcolor-urls
+  }
+  \def\pdfBorderAttrs{/Border [0 0 0] }  % bez okrajů kolem odkazů / without margins around links
+  \pdfcompresslevel=9
+\fi
+\else % pro tisk budou odkazy, na které se dá klikat, černé / for the print clickable links will be black
+\ifx\pdfoutput\undefined % nejedeme pod pdflatexem / we are not using pdflatex
+\else
+  \usepackage{color}
+  \usepackage[unicode,colorlinks,hyperindex,plainpages=false,pdftex,urlcolor=black,linkcolor=black,citecolor=black]{hyperref}
+  \definecolor{links}{rgb}{0,0,0}
+  \definecolor{anchors}{rgb}{0,0,0}
+  \def\AnchorColor{anchors}
+  \def\LinkColor{links}
+  \def\pdfBorderAttrs{/Border [0 0 0] } % bez okrajů kolem odkazů / without margins around links
+  \pdfcompresslevel=9
+\fi
+\fi
+% Řešení problému, kdy klikací odkazy na obrázky vedou za obrázek
+% This solves the problems with links which leads after the picture
+\usepackage[all]{hypcap}
+
+% Pro Java kód
+\usepackage{listings}
+\usepackage{color}
+
+\usepackage{graphicx}
+\usepackage{babel,blindtext}
+
+% https://tex.stackexchange.com/a/115562 
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+\definecolor{annot}{rgb}{0.55, 0.50, 0.0} % annotations
+\definecolor{blue(pigment)}{rgb}{0.2, 0.2, 0.6} %names
+\definecolor{green}{rgb}{0.0, 0.5, 0.0}
+
+% Style for Java Code
+\lstdefinestyle{JavaStyle}{
+language=Java,
+basicstyle=\ttfamily,
+keywordstyle=\color{javapurple}\bfseries,
+stringstyle=\color{javared},
+commentstyle=\color{javagreen},
+morecomment=[s][\color{javadocblue}]{/**}{*/},
+numbers=left,
+numberstyle=\tiny\color{black},
+stepnumber=1,
+numbersep=10pt,
+tabsize=4,
+showspaces=false,
+showstringspaces=false,
+moredelim=[il][\textcolor{annot}]{$$},
+moredelim=[is][\textcolor{annot}]{\%\%}{\%\%},
+moredelim=[is][\textcolor{blue(pigment)}]{\!\!}{\!\!},
+moredelim=[is][\textcolor{green}]{\#\#}{\#\#}
+}
+
+% Define JS language
+% https://tex.stackexchange.com/a/89576
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstdefinestyle{JavaScriptStyle}{
+   language=JavaScript,
+   backgroundcolor=\color{lightgray},
+   extendedchars=true,
+   basicstyle=\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\footnotesize,
+   numbersep=9pt,
+   tabsize=2,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b,
+   moredelim=[is][\textcolor{annot}]{\%\%}{\%\%},
+   moredelim=[is][\textcolor{javared}]{\!\!}{\!\!},
+}
+
+% Definování a zvýraznění anotací
+
+\newcommand{\annotation}[1]{\textcolor{annot}{\emph{#1}}}
+\newcommand{\redtext}[1]{\textcolor{javared}{#1}}
+
+% Informace o práci/projektu / Information about the thesis
+%---------------------------------------------------------------------------
+\projectinfo{
+  %Prace / Thesis
+  project={BP},            %typ práce BP/SP/DP/DR  / thesis type (SP = term project)
+  year={2020},             % rok odevzdání / year of submission
+  date=\today,             % datum odevzdání / submission date
+  %Nazev prace / thesis title
+  title.cs={Kompletní řešení chytré domácnosti s využitím modulů ESP a Raspberry Pi},  % název práce v češtině či slovenštině (dle zadání) / thesis title in czech language (according to assignment)
+  title.en={Smart Home Solution Based on ESP Modules and Raspberry Pi}, % název práce v angličtině / thesis title in english
+  title.length={14.5cm}, % nastavení délky bloku s titulkem pro úpravu zalomení řádku (lze definovat zde nebo níže) / setting the length of a block with a thesis title for adjusting a line break (can be defined here or below)
+  %sectitle.length={14.5cm}, % nastavení délky bloku s druhým titulkem pro úpravu zalomení řádku (lze definovat zde nebo níže) / setting the length of a block with a second thesis title for adjusting a line break (can be defined here or below)
+  %Autor / Author
+  author.name={Martin},   % jméno autora / author name
+  author.surname={Bartoš},   % příjmení autora / author surname 
+  %author.title.p={Bc.}, % titul před jménem (nepovinné) / title before the name (optional)
+  %author.title.a={Ph.D.}, % titul za jménem (nepovinné) / title after the name (optional)
+  %Ustav / Department
+  department={UITS}, % doplňte příslušnou zkratku dle ústavu na zadání: UPSY/UIFS/UITS/UPGM / fill in appropriate abbreviation of the department according to assignment: UPSY/UIFS/UITS/UPGM
+  % Školitel / supervisor
+  supervisor.name={Vladimír},   % jméno školitele / supervisor name 
+  supervisor.surname={Janoušek},   % příjmení školitele / supervisor surname
+  supervisor.title.p={Doc. Ing.},   %titul před jménem (nepovinné) / title before the name (optional)
+  supervisor.title.a={Ph.D.},    %titul za jménem (nepovinné) / title after the name (optional)
+  % Klíčová slova / keywords
+  keywords.cs={chytrá domácnost, Internet věcí, chytrá zařízení, automatizace, esp8266, Raspberry Pi, Quarkus}, % klíčová slova v českém či slovenském jazyce / keywords in czech or slovak language
+  keywords.en={Smart home, IoT, Internet of Things, smart devices, automation, esp8266, Raspberry Pi, Quarkus }, % klíčová slova v anglickém jazyce / keywords in english
+  % Abstrakt / Abstract
+%change Abstract
+  abstract.cs={V dnešní době se velice rychle rozrůstá svět chytrých zařízeních v domácnostech, které mezi sebou komunikují a usnadňují lidem život. 
+  Avšak velkým problémem pořízení takových zařízení do běžných domácností je vysoká cena a kompatibilita produktů pouze od jednoho výrobce. 
+  Cílem této bakalářské práce je vytvořit komplexní levné řešení chytré domácnosti, které bude schopen uživatel spravovat bez většího úsilí. 
+  Dané řešení je implementováno pomocí nejmodernějších technologií a nástrojů.}, 
+  % abstrakt v českém či slovenském jazyce / abstract in czech or slovak language
+  abstract.en={Nowadays, the world of smart devices in households is growing significantly, where the devices communicate with each other and make people’s lives easier. 
+  However, a major problem with the purchase of these devices to common households is the high price and compatibility of those products from one vendor. 
+  The goal of this bachelor thesis is to create a comprehensive
+  low-cost smart home solution that the user will be able to manage without much effort.
+  This solution is implemented by the latest technologies and tools.},
+   % abstrakt v anglickém jazyce / abstract in english
+  %abstract.en={An abstract of the work in English will be written in this paragraph.},
+  % Prohlášení (u anglicky psané práce anglicky, u slovensky psané práce slovensky) / Declaration (for thesis in english should be in english)
+  declaration={Prohlašuji, že jsem tuto bakalářskou práci vypracoval samostatně pod vedením pana Doc. Ing. Vladimíra Janouška Ph.D. a
+  uvedl jsem všechny literární prameny, publikace a další zdroje, ze kterých jsem čerpal.},
+  %declaration={I hereby declare that this Bachelor's thesis was prepared as an original work by the author under the supervision of Mr. X
+% The supplementary information was provided by Mr. Y
+% I have listed all the literary sources, publications and other sources, which were used during the preparation of this thesis.},
+  % Poděkování (nepovinné, nejlépe v jazyce práce) / Acknowledgement (optional, ideally in the language of the thesis)
+  acknowledgment={Rád bych poděkoval za odbornou pomoc od mého vedoucího pana Doc. Ing. Vladimíra Janouška Ph.D., který mi pomohl dostat se na správný směr mé bakalářské práce a konzultoval dané řešení.},
+  %acknowledgment={Here it is possible to express thanks to the supervisor and to the people which provided professional help
+%(external submitter, consultant, etc.).},
+  % Rozšířený abstrakt (cca 3 normostrany) - lze definovat zde nebo níže / Extended abstract (approximately 3 standard pages) - can be defined here or below
+  %extendedabstract={Do tohoto odstavce bude zapsán rozšířený výtah (abstrakt) práce v českém (slovenském) jazyce.},
+  %faculty={FIT}, % FIT/FEKT/FSI/FA/FCH/FP/FAST/FAVU/USI/DEF
+  faculty.cs={Fakulta informačních technologií}, % Fakulta v češtině - pro využití této položky výše zvolte fakultu DEF / Faculty in Czech - for use of this entry select DEF above
+  faculty.en={Faculty of Information Technology}, % Fakulta v angličtině - pro využití této položky výše zvolte fakultu DEF / Faculty in English - for use of this entry select DEF above
+  %department.cs={Ústav matematiky}, % Ústav v češtině - pro využití této položky výše zvolte ústav DEF nebo jej zakomentujte / Department in Czech - for use of this entry select DEF above or comment it out
+  %department.en={Institute of Mathematics} % Ústav v angličtině - pro využití této položky výše zvolte ústav DEF nebo jej zakomentujte / Department in English - for use of this entry select DEF above or comment it out
+}
+
+% Rozšířený abstrakt (cca 3 normostrany) - lze definovat zde nebo výše / Extended abstract (approximately 3 standard pages) - can be defined here or above
+%\extendedabstract{Do tohoto odstavce bude zapsán výtah (abstrakt) práce v českém (slovenském) jazyce.}
+
+% nastavení délky bloku s titulkem pro úpravu zalomení řádku - lze definovat zde nebo výše / setting the length of a block with a thesis title for adjusting a line break - can be defined here or above
+%\titlelength{14.5cm}
+% nastavení délky bloku s druhým titulkem pro úpravu zalomení řádku - lze definovat zde nebo výše / setting the length of a block with a second thesis title for adjusting a line break - can be defined here or above
+%\sectitlelength{14.5cm}
+
+% řeší první/poslední řádek odstavce na předchozí/následující stránce
+% solves first/last row of the paragraph on the previous/next page
+\clubpenalty=10000
+\widowpenalty=10000
+
+% checklist
+\newlist{checklist}{itemize}{1}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+% Vysazeni titulnich stran / Typesetting of the title pages
+% ----------------------------------------------
+\maketitle
+% Obsah
+% ----------------------------------------------
+\setlength{\parskip}{-2pt}
+{\hypersetup{hidelinks}\tableofcontents}
+\setlength{\parskip}{0pt}
+
+% Seznam obrazku a tabulek (pokud prace obsahuje velke mnozstvi obrazku, tak se to hodi)
+% List of figures and list of tables (if the thesis contains a lot of pictures, it is good)
+\ifczech
+  \renewcommand\listfigurename{Seznam obrázků}
+\fi
+\ifslovak
+  \renewcommand\listfigurename{Zoznam obrázkov}
+\fi
+% {\hypersetup{hidelinks}\listoffigures}
+
+\ifczech
+  \renewcommand\listtablename{Seznam tabulek}
+\fi
+\ifslovak
+  \renewcommand\listtablename{Zoznam tabuliek}
+\fi
+% {\hypersetup{hidelinks}\listoftables}
+
+\ifODSAZ
+  \setlength{\parskip}{0.5\bigskipamount}
+\else
+  \setlength{\parskip}{0pt}
+\fi
+
+% vynechani stranky v oboustrannem rezimu
+% Skip the page in the two-sided mode
+\iftwoside
+  \cleardoublepage
+\fi
+
+% Text prace / Thesis text
+% ----------------------------------------------
+\ifenglish
+  \input{xbarto96-01-kapitoly-chapters-en}
+\else
+  \input{xbarto96-01-kapitoly-chapters}
+\fi
+
+% Kompilace po částech (viz výše, nutno odkomentovat)
+% Compilation piecewise (see above, it is necessary to uncomment it)
+%\subfile{projekt-01-uvod-introduction}
+% ...
+%\subfile{chapters/projekt-05-conclusion}
+
+% Pouzita literatura / Bibliography
+% ----------------------------------------------
+\ifslovak
+  \makeatletter
+  \def\@openbib@code{\addcontentsline{toc}{chapter}{Literatúra}}
+  \makeatother
+  \bibliographystyle{bib-styles/Pysny/skplain}
+\else
+  \ifczech
+    \makeatletter
+    \def\@openbib@code{\addcontentsline{toc}{chapter}{Literatura}}
+    \makeatother
+    \bibliographystyle{bib-styles/Pysny/czplain}
+  \else
+    \makeatletter
+    \def\@openbib@code{\addcontentsline{toc}{chapter}{Bibliography}}
+    \makeatother
+    \bibliographystyle{bib-styles/Pysny/enplain}
+    %  \bibliographystyle{alpha}
+  \fi
+\fi
+\begin{flushleft}
+  \bibliography{xbarto96-20-literatura-bibliography}
+\end{flushleft}
+% vynechani stranky v oboustrannem rezimu
+% Skip the page in the two-sided mode
+\iftwoside
+  \cleardoublepage
+\fi
+
+% Prilohy / Appendices
+% ---------------------------------------------
+\appendix
+\ifczech
+  \renewcommand{\appendixpagename}{Přílohy}
+  \renewcommand{\appendixtocname}{Přílohy}
+  \renewcommand{\appendixname}{Příloha}
+\fi
+\ifslovak
+  \renewcommand{\appendixpagename}{Prílohy}
+  \renewcommand{\appendixtocname}{Prílohy}
+  \renewcommand{\appendixname}{Príloha}
+\fi
+%  \appendixpage
+
+% vynechani stranky v oboustrannem rezimu
+% Skip the page in the two-sided mode
+%\iftwoside
+%  \cleardoublepage
+%\fi
+
+\ifslovak
+  %  \section*{Zoznam príloh}
+  %  \addcontentsline{toc}{section}{Zoznam príloh}
+\else
+  \ifczech
+    %    \section*{Seznam příloh}
+    %    \addcontentsline{toc}{section}{Seznam příloh}
+  \else
+    %    \section*{List of Appendices}
+    %    \addcontentsline{toc}{section}{List of Appendices}
+  \fi
+\fi
+\startcontents[chapters]
+\setlength{\parskip}{0pt}
+% seznam příloh / list of appendices
+% \printcontents[chapters]{l}{0}{\setcounter{tocdepth}{2}}
+
+\ifODSAZ
+  \setlength{\parskip}{0.5\bigskipamount}
+\else
+  \setlength{\parskip}{0pt}
+\fi
+
+% vynechani stranky v oboustrannem rezimu
+\iftwoside
+  \cleardoublepage
+\fi
+
+% Přílohy / Appendices
+\ifenglish
+  \input{xbarto96-30-prilohy-appendices-en}
+\else
+  \input{xbarto96-30-prilohy-appendices}
+\fi
+
+% Kompilace po částech (viz výše, nutno odkomentovat)
+% Compilation piecewise (see above, it is necessary to uncomment it)
+%\subfile{xbarto96-30-prilohy-appendices}
+
+\end{document}

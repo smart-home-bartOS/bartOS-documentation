@@ -1,0 +1,209 @@
+\makeatletter
+\makeatother
+\begin{thebibliography}{10}
+
+\bibitem{mqtt:info}
+{\sc\bgroup}{Ably}{\egroup}.
+\newblock {\em Everything You Need To Know About Publish/Subscribe}.
+\newblock {\small [cit. {27.5.2020}]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{https://www.ably.io/concepts/pub-sub}}.
+
+\bibitem{hibernate:logo}
+{\sc\bgroup}{Alex Fruzenshtein}{\egroup}.
+\newblock {\em Hibernate: @Where clause} [online].
+\newblock Fruzenshtein Notes, 25. listopadu 2014 {\small [cit. {23.5.2020}]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{http://fruzenshtein.com/hibernate-where-clause/}}.
+
+\bibitem{terminy:oidc}
+{\sc\bgroup}Auth0{\egroup}.
+\newblock {\em OpenID Connect} [online].
+\newblock {\small [cit. {27.5.2020}]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{https://auth0.com/docs/protocols/oidc}}.
+
+\bibitem{oidc:logo}
+{\sc\bgroup}{Dilith Vithanage}{\egroup}.
+\newblock {\em What is OpenID Connect?} [online].
+\newblock DeerTek, 25. září 2018 {\small [cit. {27.5.2020}]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{https://deertek.wordpress.com/2018/09/25/what-is-openid-connect/}}.
+
+\bibitem{hivemq:info}
+{\sc\bgroup}{HiveMQ team}{\egroup}.
+\newblock {\em HiveMQ MQTT Broker} [online].
+\newblock {\small [cit. {27.5.2020}]}.
+\newblock Dostupn{\'{e}} z: ~{\small\url{https://www.hivemq.com/hivemq/}}.
+
+\bibitem{mqtt:hivemq}
+{\sc\bgroup}{HiveMQ team}{\egroup}.
+\newblock {\em HiveMQ - MQTT over Websockets}
+\newblock [online], 28. srpna 2013 {\small [cit. {27.5.2020}]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{https://www.hivemq.com/blog/mqtt-over-websockets-with-hivemq/}}.
+
+\bibitem{paho:info}
+{\sc\bgroup}{Ian Craggs, Andy Piper, Al Stockdill-Mander, Nicholas O'Leary a
+  další}{\egroup}.
+\newblock {\em Paho} [online].
+\newblock 2015 {\small [cit. {25.5.2020}]}.
+\newblock Dostupn{\'{e}} z: ~{\small\url{https://wiki.eclipse.org/Paho}}.
+
+\bibitem{esp8266logo}
+{\sc\bgroup}JAGElectronicsEnterprise{\egroup}.
+\newblock {\em ESP8266 ESP-12E WIFI TRANSCEIVER MODULE}.
+\newblock 2019 {\small [cit. {26.5.2020}]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{https://jagelectronicsenterprise.com/product/esp8266-esp-12e-wifi-transceiver-module/}}.
+
+\bibitem{raspberryLogo}
+{\sc\bgroup}{Jan Vítek}{\egroup}.
+\newblock {\em {Raspberry Pi 4 má problém s Wi-Fi při využití výstupu na
+  1440p}} [online].
+\newblock Svět Hardware, 2. prosince 2019 {\small [cit. {23.5.2020}]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{https://www.svethardware.cz/raspberry-pi-4-ma-problem-s-wi-fi-pri-vyuziti-vystupu-na-1440p/50766}}.
+
+\bibitem{quarkus:infoDev}
+{\sc\bgroup}{Jason Greene}{\egroup}.
+\newblock {\em {Introducing Quarkus: a next-generation Kubernetes native Java
+  framework}} [online].
+\newblock 2019 {\small [cit. {27.5.2020}]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{https://developers.redhat.com/blog/2019/03/07/quarkus-next-generation-kubernetes-native-java-framework/}}.
+
+\bibitem{keycloak}
+{\sc\bgroup}{Keycloak Contributors}{\egroup}.
+\newblock {\em Keycloak}.
+\newblock 2020 {\small [cit. 26.5.2020]}.
+\newblock Dostupn{\'{e}} z: ~{\small\url{https://www.keycloak.org/}}.
+
+\bibitem{mobx:info}
+{\sc\bgroup}{MobX team and contributors}{\egroup}.
+\newblock {\em MobX Introduction} [online].
+\newblock {\small [cit. {27.5.2020}]}.
+\newblock Dostupn{\'{e}} z: ~{\small\url{https://mobx.js.org/README.html}}.
+
+\bibitem{embedded:info}
+{\sc\bgroup}OmniSci{\egroup}.
+\newblock {\em Embedded System Definition} [online].
+\newblock OmniSci {\small [cit. {27.5.2020}]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{https://www.omnisci.com/technical-glossary/embedded-systems}}.
+
+\bibitem{postgres:wiki}
+{\sc\bgroup}{Pavel Stěhule}{\egroup}.
+\newblock {\em PostgreSQL} [online].
+\newblock {\small [cit. {25.5.2020}]}.
+\newblock Dostupn{\'{e}} z: ~{\small\url{https://postgres.cz/wiki/PostgreSQL}}.
+
+\bibitem{postgres:tutorial}
+{\sc\bgroup}PostgreSQLTutorial{\egroup}.
+\newblock {\em What is PostgreSQL?} [online].
+\newblock {\small [cit. {27.5.2020}]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{https://www.postgresqltutorial.com/what-is-postgresql/}}.
+
+\bibitem{quarkus:website}
+{\sc\bgroup}Quarkus{\egroup}.
+\newblock {\em Quarkus} [online].
+\newblock Quarkus.
+\newblock Dostupn{\'{e}} z: ~{\small\url{https://quarkus.io/}}.
+
+\bibitem{wemosFigure}
+{\sc\bgroup}{Reichelt}{\egroup}.
+\newblock {\em D1 MINI D1 Mini - ESP8266, v3.0}.
+\newblock 2020 {\small [cit. 26.5.2020]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{https://www.reichelt.com/it/en/d1-mini-esp8266-v3-0-d1-mini-p253978.html?r=1}}.
+
+\bibitem{json:example}
+{\sc\bgroup}{Research Gate}{\egroup}.
+\newblock {\em {Epidemiological Data Challenges: Planning for a More Robust
+  Future Through Data Standards - Scientific Figure on ResearchGate.}}
+  [online].
+\newblock Research Gate, listopad 2018 {\small [cit. {27.5.2020}]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{https://www.researchgate.net/figure/Sample-epidemiological-case-count-data-in-a-simple-JSON-format-Compared-to-CSV_fig4_329149965}}.
+
+\bibitem{restful:info}
+{\sc\bgroup}{RESTful API website contributors}{\egroup}.
+\newblock {\em What is REST}.
+\newblock {\small [cit. {27.5.2020}]}.
+\newblock Dostupn{\'{e}} z: ~{\small\url{https://restfulapi.net/}}.
+
+\bibitem{mcu:info}
+{\sc\bgroup}{Robert Keim}{\egroup}.
+\newblock {\em What Is a Microcontroller? The Defining Characteristics and
+  Architecture of a Common Component} [online].
+\newblock All About Circuits, 25. března 2019 {\small [cit. {21.5.2020}]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{https://www.allaboutcircuits.com/technical-articles/what-is-a-microcontroller-introduction-component-characteristics-component/}}.
+
+\bibitem{embedded:figure}
+{\sc\bgroup}Swaroop{\egroup}.
+\newblock {\em What is Embedded System and How it Works?} [online].
+\newblock Codrey Electronics, 25. května 2020 {\small [cit. {27.5.2020}]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{https://www.codrey.com/embedded-systems/embedded-systems-introduction/}}.
+
+\bibitem{restful:example}
+{\sc\bgroup}Vincy{\egroup}.
+\newblock {\em PHP RESTful Web Service API} [online].
+\newblock PHPPot, 19. února 2019 {\small [cit. {27.5.2020}]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{https://phppot.com/php/php-restful-web-service/}}.
+
+\bibitem{esp01}
+{\sc\bgroup}{Voltspace}{\egroup}.
+\newblock {\em ESP-01 ESP8266}.
+\newblock 2020 {\small [cit. 26.5.2020]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{https://voltspace.in/product/esp-01-esp8266/}}.
+
+\bibitem{use_case:info}
+{\sc\bgroup}{Wikipedia contributors}{\egroup}.
+\newblock {\em Diagram užití}.
+\newblock {\small [cit. {27.5.2020}]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{https://cs.wikipedia.org/wiki/Diagram_u%C5%BEit%C3%AD}}.
+
+\bibitem{wiki:esp}
+{\sc\bgroup}{Wikipedia contributors}{\egroup}.
+\newblock {\em ESP8266}.
+\newblock {\small [cit. {23.5.2020}]}.
+\newblock {\small [Online; edited 20. 5. 2020]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{https://en.wikipedia.org/wiki/ESP8266}}.
+
+\bibitem{wiki:iot}
+{\sc\bgroup}{Wikipedia contributors}{\egroup}.
+\newblock {\em Internet věcí}.
+\newblock {\small [cit. {22.5.2020}]}.
+\newblock {\small [Online; edited 20. 5. 2020]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{https://cs.wikipedia.org/wiki/Internet_v%C4%9Bc%C3%AD}}.
+
+\bibitem{wiki:mqtt}
+{\sc\bgroup}{Wikipedia contributors}{\egroup}.
+\newblock {\em MQTT}.
+\newblock {\small [cit. {27.5.2020}]}.
+\newblock {\small [Online; edited 30. 4. 2020]}.
+\newblock Dostupn{\'{e}} z: ~{\small\url{https://en.wikipedia.org/wiki/MQTT}}.
+
+\bibitem{react:info}
+{\sc\bgroup}{Wikipedia contributors}{\egroup}.
+\newblock {\em React (web framework)}.
+\newblock {\small [cit. {25.5.2020}]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{https://en.wikipedia.org/wiki/React_(web_framework)}}.
+
+\bibitem{wiki:vertx}
+{\sc\bgroup}{Wikipedia contributors}{\egroup}.
+\newblock {\em Vert.x}.
+\newblock {\small [cit. {27.5.2020}]}.
+\newblock Dostupn{\'{e}} z:
+  ~{\small\url{https://en.wikipedia.org/wiki/Vert.x}}.
+
+\end{thebibliography}

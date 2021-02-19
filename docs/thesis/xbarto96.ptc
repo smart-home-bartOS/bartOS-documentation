@@ -1,0 +1,37 @@
+\babel@toc {czech}{}
+\contentsline {chapter}{\numberline {1}\IeC {\'U}vod}{2}{chapter.1}% 
+\contentsline {chapter}{\numberline {2}D\IeC {\r u}le\IeC {\v z}it\IeC {\'e} term\IeC {\'\i }ny}{3}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}IoT - Internet v\IeC {\v e}c\IeC {\'\i }}{3}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Vestav\IeC {\v e}n\IeC {\'y} syst\IeC {\'e}m}{4}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}MCU - mikrokontrol\IeC {\'e}r}{5}{section.2.3}% 
+\contentsline {section}{\numberline {2.4}MQTT protokol}{6}{section.2.4}% 
+\contentsline {section}{\numberline {2.5}OIDC}{9}{section.2.5}% 
+\contentsline {section}{\numberline {2.6}JSON}{9}{section.2.6}% 
+\contentsline {section}{\numberline {2.7}\emph {RESTful} aplikace}{10}{section.2.7}% 
+\contentsline {chapter}{\numberline {3}Sou\IeC {\v c}asn\IeC {\'y} stav a n\IeC {\'a}vrh \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{11}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}N\IeC {\'a}vrh serverov\IeC {\'e} \IeC {\v c}\IeC {\'a}sti}{13}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}N\IeC {\'a}vrh datab\IeC {\'a}ze}{17}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}N\IeC {\'a}vrh klientsk\IeC {\'e} aplikace}{19}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}N\IeC {\'a}vrh HW za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i }}{21}{section.3.4}% 
+\contentsline {chapter}{\numberline {4}Pou\IeC {\v z}it\IeC {\'e} technologie a komponenty}{24}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Serverov\IeC {\'a} \IeC {\v c}\IeC {\'a}st}{25}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Datab\IeC {\'a}zov\IeC {\'a} \IeC {\v c}\IeC {\'a}st}{26}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Klientsk\IeC {\'a} aplikace}{28}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}Hardwarov\IeC {\'a} \IeC {\v c}\IeC {\'a}st}{29}{section.4.4}% 
+\contentsline {section}{\numberline {4.5}Autentiza\IeC {\v c}n\IeC {\'\i }/autoriza\IeC {\v c}n\IeC {\'\i } slu\IeC {\v z}ba}{30}{section.4.5}% 
+\contentsline {section}{\numberline {4.6}Komunikace pomoc\IeC {\'\i } \emph {MQTT} protokolu}{31}{section.4.6}% 
+\contentsline {chapter}{\numberline {5}Implementace}{33}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Serverov\IeC {\'a} \IeC {\v c}\IeC {\'a}st}{33}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Datab\IeC {\'a}zov\IeC {\'a} \IeC {\v c}\IeC {\'a}st}{38}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}Klientsk\IeC {\'a} \IeC {\v c}\IeC {\'a}st}{40}{section.5.3}% 
+\contentsline {section}{\numberline {5.4}HW \IeC {\v c}\IeC {\'a}st}{42}{section.5.4}% 
+\contentsline {chapter}{\numberline {6}Testov\IeC {\'a}n\IeC {\'\i }}{43}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}U\IeC {\v z}ivatelsk\IeC {\'e} rozhran\IeC {\'\i }}{43}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}Kompletn\IeC {\'\i } syst\IeC {\'e}m v~praxi}{44}{section.6.2}% 
+\contentsline {section}{\numberline {6.3}N\IeC {\'a}vrh budouc\IeC {\'\i }ch vylep\IeC {\v s}en\IeC {\'\i }}{45}{section.6.3}% 
+\contentsline {chapter}{\numberline {7}Z\IeC {\'a}v\IeC {\v e}r}{47}{chapter.7}% 
+\contentsline {chapter}{Literatura}{48}{chapter*.77}% 
+\ttl@starttoc {chapters@1}
+\contentsline {chapter}{\numberline {A}Detailn\IeC {\'\i } vzhled aplikace}{50}{appendix.A}% 
+\contentsline {chapter}{\numberline {B}Testovac\IeC {\'\i } za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i }}{53}{appendix.B}% 
+\contentsfinish 
